@@ -40,7 +40,7 @@ namespace Eshop.Games.Services
                 {
                     games.AddRange(gameReturn.Games.Game);
                     index = index + 200;
-                    gameReturn = await _NintendoService.GetGames(query.Index, query.Limit);
+                    gameReturn = await _NintendoService.GetGames(index, 200);
                 }
 
                 return games;

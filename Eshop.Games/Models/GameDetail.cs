@@ -1,4 +1,5 @@
-﻿using Newtonsoft.Json;
+﻿using Eshop.Games.Converters;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -11,7 +12,20 @@ namespace Eshop.Games.Models
         //internal Screenshot Screenshots { get; set; }
 
         [JsonProperty("game_overview_description")]
-        public List<object> Description { get; set; }
+        internal List<object> DescriptionOverview { get; set; }
+
+        public string Description
+        {
+            get
+            {
+                if (DescriptionOverview != null && DescriptionOverview.Count > 0)
+                {
+                    return FieldConverter.FormatarDescricao(DescriptionOverview[0].ToString());
+                }
+                else
+                    return "";
+            }
+        }
 
         [JsonProperty("dsiware")]
         public string Dsiware { get; set; }
@@ -58,8 +72,8 @@ namespace Eshop.Games.Models
         [JsonProperty("demo_downloads")]
         public string DemoDownloads { get; set; }
 
-        [JsonProperty("intro")]
-        public List<object> Intro { get; set; }
+        //[JsonProperty("intro")]
+        //public List<object> Intro { get; set; }
 
         [JsonProperty("number_of_players")]
         public string NumberOfPlayers { get; set; }

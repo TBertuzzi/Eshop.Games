@@ -35,7 +35,7 @@ namespace Eshop.Games.Test
                 {
                     Console.WriteLine($"Game:{game.Title}");
                    var detail = eshopService.GetGameDetail(game).Result;
-                    Console.WriteLine($"Detail:{detail?.Description[0]}");
+                    Console.WriteLine($"Detail:{detail?.Description}");
                 }
 
               

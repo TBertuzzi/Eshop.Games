@@ -23,9 +23,10 @@ namespace Eshop.Games.Services
             }
         }
 
-        public async Task<IEnumerable<GameDetail>> GetGameDetail(Game game)
+        public async Task<GameDetail> GetGameDetail(Game game)
         {
-            return await _NintendoService.GetGameDetail(game.Slug);
+            var gameDetail = await _NintendoService.GetGameDetail(game.Slug);
+            return gameDetail.Game;
         }
 
         public async Task<IEnumerable<Game>> GetGames(Query query)

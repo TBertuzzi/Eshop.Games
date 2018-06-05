@@ -11,7 +11,7 @@ namespace Eshop.Games.Models
         //internal Screenshot Screenshots { get; set; }
 
         [JsonProperty("game_overview_description")]
-        public List<object> GameOverviewDescription { get; set; }
+        public List<object> Description { get; set; }
 
         [JsonProperty("dsiware")]
         public string Dsiware { get; set; }

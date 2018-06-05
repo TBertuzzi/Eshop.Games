@@ -9,6 +9,6 @@ namespace Eshop.Games.Services
     public interface IEshopService
     {
        Task<IEnumerable<Game>> GetGames(Query query);
-       Task<IEnumerable<GameDetail>> GetGameDetail(Game game);
+       Task<GameDetail> GetGameDetail(Game game);
     }
 }

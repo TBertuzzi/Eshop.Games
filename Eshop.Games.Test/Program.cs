@@ -33,7 +33,9 @@ namespace Eshop.Games.Test
                 Console.WriteLine("Games: ");
                 foreach (var game in games)
                 {
-                    Console.WriteLine(game.Title);
+                    Console.WriteLine($"Game:{game.Title}");
+                   var detail = eshopService.GetGameDetail(game).Result;
+                    Console.WriteLine($"Detail:{detail?.Description[0]}");
                 }
 
               

@@ -17,11 +17,6 @@ namespace Eshop.Games.Services.Nintendo
 
         }
 
-        public Task<IEnumerable<GameDetail>> GetGameDetail(string slug)
-        {
-            throw new NotImplementedException();
-        }
-
         public async Task<NintendoGame> GetGames(int index, int limit)
         {
             var response = await HttpClient.GetAsync($"{Constants.NintendoUSUrl}/json/content/get/filter/game?system=switch&sort=title&direction=asc&shop=ncom&limit={limit}&offset={index}").ConfigureAwait(false);
@@ -42,9 +37,9 @@ namespace Eshop.Games.Services.Nintendo
             return new NintendoGame();
         }
 
-        public async Task<NintendoGameDetail> GetGameDetailsAsync(string gameSlug)
+        public async Task<NintendoGameDetail> GetGameDetail(string slug)
         {
-            var response = await HttpClient.GetAsync($"{Constants.NintendoUSUrl}/json/content/get/game/{gameSlug}").ConfigureAwait(false);
+            var response = await HttpClient.GetAsync($"{Constants.NintendoUSUrl}/json/content/get/game/{slug}").ConfigureAwait(false);
 
 
             if (response.IsSuccessStatusCode)

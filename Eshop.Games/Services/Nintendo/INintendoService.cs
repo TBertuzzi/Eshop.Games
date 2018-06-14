@@ -8,7 +8,7 @@ namespace Eshop.Games.Services
 {
     internal interface INintendoService
     {
-        Task<NintendoGame> GetGames(int index,int limit);
+        Task<NintendoGame> GetGames(int index,int limit, Order order);
         Task<NintendoGameDetail> GetGameDetail(string slug);
     }
 }

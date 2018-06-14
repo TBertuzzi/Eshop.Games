@@ -10,16 +10,16 @@ using Eshop.Games.Helpers;
 
 namespace Eshop.Games.Services.Nintendo
 {
-    internal class NitendoNAService :  BaseService, INintendoService
+    internal class NintendoNAService :  BaseService, INintendoService
     {
-        public NitendoNAService(System system)
+        public NintendoNAService(System system)
         {
 
         }
 
-        public async Task<NintendoGame> GetGames(int index, int limit)
+        public async Task<NintendoGame> GetGames(int index, int limit,Order order)
         {
-            var response = await HttpClient.GetAsync($"{Constants.NintendoUSUrl}/json/content/get/filter/game?system=switch&sort=title&direction=asc&shop=ncom&limit={limit}&offset={index}").ConfigureAwait(false);
+            var response = await HttpClient.GetAsync($"{Constants.NintendoUSUrl}/json/content/get/filter/game?system=switch&sort=title&direction={order.ToString()}&shop=ncom&limit={limit}&offset={index}").ConfigureAwait(false);
 
 
             if (response.IsSuccessStatusCode)

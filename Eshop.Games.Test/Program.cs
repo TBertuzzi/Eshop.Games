@@ -22,8 +22,8 @@ namespace Eshop.Games.Test
                 {
                     Index = 0,
                     Limit = 200,
-                    Order = Order.Asc,
-                    Sort = Sort.Title,
+                    Order = Order.asc,
+                    Sort = Sort.title,
                     Value = ""
                 };
 
@@ -33,9 +33,16 @@ namespace Eshop.Games.Test
                 Console.WriteLine("Games: ");
                 foreach (var game in games)
                 {
-                    Console.WriteLine($"Game:{game.Title}");
-                   var detail = eshopService.GetGameDetail(game).Result;
-                    Console.WriteLine($"Detail:{detail?.Description}");
+                    try
+                    {
+                        Console.WriteLine($"Game:{game.Title}");
+                        var detail = eshopService.GetGameDetail(game).Result;
+                        Console.WriteLine($"Detail HTML :{detail?.DescriptionHTML}");
+                    }
+                    catch (Exception ex)
+                    {
+                        Console.WriteLine($"Erro: {ex.Message}");
+                    }
                 }
 
               

@@ -19,12 +19,12 @@ namespace Eshop.Games
 
     public enum Sort
     {
-        Title
+        title
     }
 
     public enum Order
     {
-        Asc,
-        Desc
+        asc,
+        desc
     }
 }

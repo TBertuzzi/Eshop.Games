@@ -1,5 +1,4 @@
-﻿using Eshop.Games.Converters;
-using Newtonsoft.Json;
+﻿using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -14,13 +13,14 @@ namespace Eshop.Games.Models
         [JsonProperty("game_overview_description")]
         internal List<object> DescriptionOverview { get; set; }
 
-        public string Description
+        [JsonIgnore]
+        public string DescriptionHTML
         {
             get
             {
                 if (DescriptionOverview != null && DescriptionOverview.Count > 0)
                 {
-                    return FieldConverter.FormatarDescricao(DescriptionOverview[0].ToString());
+                    return DescriptionOverview[0]?.ToString();
                 }
                 else
                     return "";

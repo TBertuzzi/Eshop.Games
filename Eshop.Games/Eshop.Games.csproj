@@ -2,6 +2,15 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
+    <Authors>tbertuzzi</Authors>
+    <Company>KBits</Company>
+    <Description>Api to get data from Nintendo eShop</Description>
+    <Copyright>Copyright ©2018 KBits</Copyright>
+    <PackageLicenseUrl>http://opensource.org/licenses/MS-PL</PackageLicenseUrl>
+    <PackageProjectUrl>https://github.com/TBertuzzi/Eshop.Games</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/TBertuzzi/Eshop.Games</RepositoryUrl>
+    <PackageTags>nintendo eshop xamarin nintendoeshop netstandard</PackageTags>
+    <PackageReleaseNotes>First Version</PackageReleaseNotes>
   </PropertyGroup>
 
   <ItemGroup>

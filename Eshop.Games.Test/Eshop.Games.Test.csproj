@@ -6,7 +6,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Eshop.Games\Eshop.Games.csproj" />
+    <PackageReference Include="Eshop.Games" Version="1.0.0" />
   </ItemGroup>
 
 </Project>

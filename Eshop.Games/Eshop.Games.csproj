@@ -11,6 +11,8 @@
     <RepositoryUrl>https://github.com/TBertuzzi/Eshop.Games</RepositoryUrl>
     <PackageTags>nintendo eshop xamarin nintendoeshop netstandard</PackageTags>
     <PackageReleaseNotes>First Version</PackageReleaseNotes>
+    <PackageIconUrl>https://github.com/TBertuzzi/Eshop.Games/blob/master/Resources/eshopIcon.png?raw=true</PackageIconUrl>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
   </PropertyGroup>
 
   <ItemGroup>

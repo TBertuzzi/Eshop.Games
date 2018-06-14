@@ -7,9 +7,6 @@ namespace Eshop.Games.Models
 {
     internal class Screenshot
     {
-        //[JsonProperty("screenshot_gallery")]
-        //public ScreenshotGallery ScreenshotGallery { get; set; }
-
         [JsonProperty("title")]
         public string Title { get; set; }
 

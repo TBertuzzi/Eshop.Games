@@ -7,10 +7,6 @@ namespace Eshop.Games.Models
 {
     public class Game
     {
-        //[JsonProperty("categories")]
-        //public List<string> Category { get; set; }
-        // public GameCategories Categories { get; set; }
-
         [JsonProperty("slug")]
         public string Slug { get; set; }
 

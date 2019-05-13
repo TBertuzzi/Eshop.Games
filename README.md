@@ -30,7 +30,7 @@ The following features are planned for our first release:
 
 |Name|Info|
 | ------------------- | :------------------: |
-|Eshop.Games|[![NuGet](https://img.shields.io/badge/nuget-1.0.0-blue.svg)](https://www.nuget.org/packages/Eshop.Games/1.0.0/)|
+|Eshop.Games|[![NuGet](https://buildstats.info/nuget/Eshop.Games)](https://www.nuget.org/packages/Eshop.Games/)|
 
 ## Sample
 
